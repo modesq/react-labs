@@ -32,7 +32,6 @@ class HornedBeast extends React.Component {
             </div>
         )
     }
-    
 }
 
 function MyVerticallyCenteredModal(props) {
@@ -60,6 +59,7 @@ function MyVerticallyCenteredModal(props) {
             </Modal.Footer>
         </Modal>
     );
+}
 
 function App() {
     const [modalShow, setModalShow] = React.useState(false);
@@ -77,5 +77,5 @@ function App() {
         </>
     );
 }
-}
+
 export default HornedBeast;
