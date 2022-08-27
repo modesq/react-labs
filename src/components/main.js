@@ -1,25 +1,25 @@
 import React from "react";
 import HornedBeast from "./hornedBeast";
-import Data from "./data.json";
-
-
-let dataEntry = Data.map(element =>
-    <HornedBeast
-        id={element._id}
-        img={element.image_url}
-        title={element.title}
-        description={element.description}
-        keyword={element.keyword}
-        horns={element.horns}
-    />
-);
 
 
 class Main extends React.Component {
-
     render() {
         return (
-            dataEntry
+            <div>
+                {
+                    this.props.jsonData.map(element =>
+                        <HornedBeast
+                            id={element._id}
+                            img={element.image_url}
+                            title={element.title}
+                            description={element.description}
+                            keyword={element.keyword}
+                            horns={element.horns}
+                            openModal={this.props.openModal}
+                        />
+                    )
+                }
+            </div>
         )
     }
 }
